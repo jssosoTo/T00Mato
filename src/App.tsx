@@ -33,12 +33,10 @@ function App() {
   const routes = [];
 
   return (
-    <div>
-      <Routes>
-        {formatRoutes(routes)}
-        <Route path="*" element={<Error />} />
-      </Routes>
-    </div>
+    <Routes>
+      {formatRoutes(routes)}
+      <Route path="*" element={<Error />} />
+    </Routes>
   );
 }
 
