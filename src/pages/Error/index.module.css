@@ -1,0 +1,23 @@
+/* main color: #087f5b */
+/* secondary color: #e6fcf5 */
+
+body {
+  background-color: #e6fcf5 !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wholeContainer {
+  display: inline-block;
+  margin: 0 auto !important;
+  text-align: center;
+  height: 70vh;
+}
+
+.wholeContainer span {
+  font-size: 8rem;
+  margin-bottom: 5rem;
+  clip-path: polygon(0 0, 97% 0, 100% 100%, 3% 100%);
+}
