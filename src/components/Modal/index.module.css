@@ -1,0 +1,56 @@
+.CardContainer {
+  height: 100vh;
+  width: 100%;
+
+  position: relative;
+}
+
+.ModalCard {
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: inline-block;
+  background-color: #fff;
+
+  min-width: 40rem;
+
+  border-radius: 15px;
+}
+
+.ModalTitleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+
+  border-bottom: 1px solid #ccc;
+}
+
+.ModalTitleContainer h1 {
+  font-weight: 600;
+  font-size: 2rem;
+
+  color: var(--main-color);
+}
+
+.ModalTitleContainer div svg {
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+
+  fill: var(--main-color);
+}
+
+.ModalTitleContainer div svg:hover {
+  rotate: 180deg;
+}
+
+.ModalContentContainer {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}

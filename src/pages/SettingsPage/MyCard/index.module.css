@@ -1,0 +1,59 @@
+/* .settingCard {
+  background-color: #fff;
+
+  border-radius: 10px;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.settingHeadingTitle {
+  border-bottom: 1px solid #eee;
+
+  padding: 0.6rem 0;
+
+  font-weight: 500;
+  color: var(--main-color);
+
+  margin-bottom: 1rem;
+} */
+
+.accountItem {
+  display: grid;
+
+  grid-template-columns: 10rem 1fr 7rem;
+
+  column-gap: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .accountItem {
+    display: flex;
+
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+.avatar {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 15px;
+}
+
+.accountItemContent {
+  gap: 0.8rem;
+
+  justify-content: center;
+}
+
+.BtnContainer {
+  gap: 0.5rem;
+}
+
+.BtnContainer button {
+  border: none;
+
+  font-size: 0.9rem;
+
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}

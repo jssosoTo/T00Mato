@@ -3,7 +3,7 @@ import styles from './index.module.css';
 
 function Error() {
   return (
-    <div className={`${styles.wholeContainer} column-flex`}>
+    <div className={`${styles.wholeContainer} column-flex flex-center`}>
       <span className="cool-text">404 Not Found</span>
       <Link to="/" className="btn btn-plus-YMove">
         Back Home
