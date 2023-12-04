@@ -6,10 +6,19 @@ import {
   CheckCircleOutlined,
   CloseCircleOutlined,
   ClockCircleOutlined,
+  CheckOutlined,
+  CloseOutlined,
 } from '@ant-design/icons';
 import moment from 'moment';
 import { Modal } from 'antd';
 import { useState } from 'react';
+
+const initialAddModalState = {
+  isOpen: false,
+  title: '',
+  remark: '',
+  date: '',
+};
 
 function FutureCountdown() {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false);
@@ -22,6 +31,19 @@ function FutureCountdown() {
     date: '',
     isFinished: false,
   });
+  const [addModalContent, setAddModalContent] = useState<{
+    isOpen: boolean;
+    title: string;
+    remark: string;
+    date: string;
+  }>(initialAddModalState);
+
+  const handleChange = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setAddModalContent({ ...addModalContent, [name]: value });
+  };
 
   const arr = [
     { title: 'bonjour', date: '2022-10-17', isFinished: true },
@@ -35,7 +57,12 @@ function FutureCountdown() {
       title="未来时间轴"
       className={`mt-5`}
       action={
-        <button className={`btn ${styles.btnSquare}`}>
+        <button
+          className={`btn ${styles.btnSquare}`}
+          onClick={() =>
+            setAddModalContent({ ...initialAddModalState, isOpen: true })
+          }
+        >
           <PlusOutlined />
         </button>
       }
@@ -120,10 +147,15 @@ function FutureCountdown() {
       >
         <header className={`${styles.titleHeader} container-sm`}>
           <div className={styles.titleHeaderTitle}>
-            <h2>{modalContent.title}</h2>
+            <h2 className={`${modalContent.isFinished ? 'finish' : null}`}>
+              {modalContent.title}
+            </h2>
             <h4>{moment(modalContent.date).format('YYYY-MM-DD')}</h4>
           </div>
-          <div className={styles.setFinishedContainer}>
+          <div
+            className={styles.setFinishedContainer}
+            onClick={() => setIsModalOpen(false)}
+          >
             {modalContent.isFinished ? (
               <CloseCircleOutlined className={styles.closeIcon} />
             ) : (
@@ -138,6 +170,62 @@ function FutureCountdown() {
           <button className="btn">
             <ClockCircleOutlined /> <span>在计时页面显示</span>
           </button>
+        </main>
+      </Modal>
+      <Modal
+        open={addModalContent.isOpen}
+        onCancel={() => setAddModalContent({ ...initialAddModalState })}
+        closeIcon={null}
+        footer={null}
+      >
+        <header className={`${styles.titleHeader} container-sm`}>
+          <div
+            className={styles.setFinishedContainer}
+            onClick={() => setAddModalContent({ ...initialAddModalState })}
+          >
+            <CloseOutlined className={styles.closeIcon} />
+          </div>
+          <div className={styles.titleHeaderTitle}>
+            <h2 style={{ fontSize: '1.2rem' }}>添加未来倒计时</h2>
+          </div>
+          <div
+            className={styles.setFinishedContainer}
+            onClick={() => {
+              console.log(addModalContent);
+              setAddModalContent({ ...initialAddModalState });
+            }}
+          >
+            <CheckOutlined className={styles.tickIcon} />
+          </div>
+        </header>
+        <main className={styles.mainBody}>
+          <form className={styles.formContainer}>
+            <div className={styles.formDiv}>
+              <input
+                placeholder='输入计划名称，如"考研"'
+                name="title"
+                value={addModalContent.title}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={styles.formDiv}>
+              <input
+                placeholder='输入备注，如"考上心仪的大学"'
+                name="remark"
+                value={addModalContent.remark}
+                onChange={handleChange}
+              />
+            </div>
+            <div className={styles.formDateSelector}>
+              <h3>截止日期:</h3>
+              <input
+                type="date"
+                name="date"
+                value={addModalContent.date}
+                onChange={handleChange}
+              />
+            </div>
+          </form>
         </main>
       </Modal>
     </Card>
