@@ -25,6 +25,7 @@
   --text-after-color: rgb(89, 255, 0);
   --text-before-color: rgb(0, 255, 149);
   --dark-main-color: #046044;
+  --btn-main-color: #2f8a6f;
 }
 
 html {
@@ -128,6 +129,10 @@ body::-webkit-scrollbar-thumb {
   mix-blend-mode: screen;
 }
 
+.flex {
+  display: flex;
+}
+
 .column-flex {
   display: flex;
   flex-direction: column;
@@ -141,6 +146,10 @@ body::-webkit-scrollbar-thumb {
 
 .flex-center {
   justify-content: center;
+}
+
+.flex-align-center {
+  align-items: center;
 }
 
 .flex-between {
@@ -164,7 +173,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .btn:hover {
-  background-color: #2f8a6f;
+  background-color: var(--btn-main-color);
 }
 
 .btn:hover.btn-plus-YMove {
@@ -213,6 +222,10 @@ body::-webkit-scrollbar-thumb {
 
 .mt-5 {
   margin-top: 1.2rem;
+}
+
+.finish {
+  text-decoration: line-through;
 }
 
 /* ↑ GLOBAL PROPERTY */
