@@ -1,5 +1,6 @@
 import FutureCountdown from './FutureCountdown';
 import MyCard from './MyCard';
+import ThemeCard from './ThemeCard';
 import styles from './index.module.css';
 
 function SettingsPage() {
@@ -10,6 +11,7 @@ function SettingsPage() {
     >
       <MyCard />
       <FutureCountdown />
+      <ThemeCard />
     </main>
   );
 }
