@@ -87,19 +87,19 @@ function App() {
 
             <ul className="nav-links">
               <li>
-                <Link to="/">
+                <Link to="/todo">
                   <EditOutlined className="antd-outline main-text-color" />
                   <h4>待办</h4>
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/todoList">
                   <AlignLeftOutlined className="antd-outline main-text-color" />
                   <h4>待办集</h4>
                 </Link>
               </li>
               <li>
-                <Link to="/">
+                <Link to="/dataSet">
                   <PieChartOutlined className="antd-outline main-text-color" />
                   <h4>数据统计</h4>
                 </Link>
