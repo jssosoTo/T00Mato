@@ -197,7 +197,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .shadow {
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
 }
 
 .main-text-color {
@@ -231,11 +231,14 @@ body::-webkit-scrollbar-thumb {
 /* ↑ GLOBAL PROPERTY */
 
 /* APP PARTICULAR PROPERTY */
-.navbar {
+.body-container > header {
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
+.navbar {
   padding: 0.8rem 0;
   background-color: #fff;
   border-bottom: 1px solid #e1e1e1;
