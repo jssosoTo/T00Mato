@@ -1,0 +1,228 @@
+.Body {
+  flex: 1;
+  width: 100%;
+  background: linear-gradient(225deg, #ffffff, #f0f5ff);
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  padding: 3rem 0;
+  min-height: calc(100vh - 4rem);
+}
+
+.HeaderTitle {
+  padding-top: 5rem;
+}
+
+.HeaderTitle > h1 {
+  font-size: 3rem;
+  line-height: 1.1;
+  letter-spacing: 0.1em;
+
+  margin-bottom: 1.6rem;
+}
+
+.HeaderTitle > p {
+  width: 90%;
+
+  font-size: 0.9rem;
+  color: #6a7b8c;
+  line-height: 1.6;
+
+  margin-bottom: 2rem;
+}
+
+.HeaderBtns > a:not(:first-child) {
+  margin-left: 1rem;
+}
+
+.HeaderBtns > a:first-child {
+  background: transparent;
+  box-shadow: inset 0 0 0 2px var(--main-color);
+  color: var(--main-color);
+}
+
+.HeaderBtns > a:first-child:hover {
+  background-color: var(--secondary-color);
+}
+
+.HeaderBtns > a {
+  border: none;
+  padding: 0.8rem 1.6rem;
+}
+
+.HeaderIMG {
+  background-image: url('https://gw.alipayobjects.com/mdn/rms_d314dd/afts/img/A*f_gcSbpq-6kAAAAAAAAAAABkARQnAQ');
+  background-size: cover;
+  background-position: left center;
+
+  min-height: 30rem;
+}
+
+.ContactContainer {
+  display: flex;
+  gap: 1rem;
+
+  margin-top: 2rem;
+}
+
+.ContactContainer > a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+}
+
+.ContactContainer > a svg {
+  font-size: 1.2rem;
+  fill: var(--dark-main-color);
+}
+
+@media screen and (max-width: 1024px) {
+  .Header {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.FunctionIntro {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(0, 174, 255),
+    rgb(255, 123, 0)
+  );
+
+  padding: 3rem 0;
+}
+
+.FeatureContainer {
+  background: linear-gradient(225deg, #ffffff, #f0f5ff);
+  border-radius: 0.8rem;
+  padding: 4rem 3rem;
+
+  /* display: flex;
+  justify-content: space-between; */
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  text-align: center;
+}
+
+.FeatureContainer .FeatureIntro:not(:first-child) {
+  border-left: 1px solid lightgray;
+  padding-left: 2rem;
+}
+
+.FeatureContainer .FeatureIntro:not(:last-child) {
+  padding-right: 2rem;
+}
+
+.FeatureIcon svg {
+  font-size: 4rem;
+}
+
+.FeatureContainer .FeatureIntro:first-child .FeatureIcon svg {
+  fill: orange;
+}
+
+.FeatureContainer .FeatureIntro:nth-child(2) .FeatureIcon svg {
+  fill: green;
+}
+
+.FeatureContainer .FeatureIntro:last-child .FeatureIcon svg {
+  fill: rgb(255, 72, 102);
+}
+
+.FeatureIntro .FeatureIcon {
+  margin-bottom: 1.6rem;
+}
+
+.FeatureIntro > h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+
+  margin-bottom: 1.4rem;
+}
+
+.FeatureIntro > p {
+  font-size: 0.85rem;
+  color: #697b8c;
+}
+
+@media screen and (max-width: 768px) {
+  .FeatureContainer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 3rem;
+  }
+
+  .FeatureContainer .FeatureIntro:not(:first-child) {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .FeatureContainer .FeatureIntro:not(:last-child) {
+    padding-right: 0;
+  }
+}
+
+.ThanksContainer {
+  padding: 4rem 0 8rem 0;
+}
+
+.Thanks {
+  text-align: center;
+}
+
+.Thanks h2 {
+  display: inline-block;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--main-color);
+
+  margin-bottom: 4rem;
+}
+
+.BrandContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+
+.BrandIcon {
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+
+  scale: 2;
+}
+
+.BrandIcon > span {
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.BrandIcon span {
+  font-size: 22px;
+  font-weight: 600;
+  color: rgb(25, 24, 24) !important;
+}
+
+@media screen and (max-width: 900px) {
+  .BrandContainer {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,77 @@
+.ModalHeader {
+  background-color: var(--main-color);
+  color: var(--secondary-color);
+
+  padding: 0.8rem 1.2rem;
+
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.ModalHeader h2 {
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 1.1;
+}
+
+.ModalMain {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 1rem 0.8rem;
+}
+
+.ModalBtns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+}
+
+.ModalBtns button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.8rem 0;
+  border-radius: 1rem;
+  border: none;
+}
+
+.ModalBtns button:nth-child(odd) {
+  grid-column: 1 / 3;
+}
+
+.ModalBtns button:nth-child(even) {
+  grid-column: 3 / 5;
+}
+
+.ModalData {
+  background-color: rgba(0, 0, 0, 0.075);
+  padding: 0.2rem 0.5rem;
+  border-radius: 1rem;
+}
+
+.ModalDataTitle {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.ModalDataContent {
+  display: flex;
+  justify-content: space-around;
+}
+
+.ModalDataItem h6 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  text-align: center;
+}
+
+.ModalDataItem h4 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.ModalDataItem h4 span {
+  font-size: 0.8rem;
+  font-weight: normal;
+}

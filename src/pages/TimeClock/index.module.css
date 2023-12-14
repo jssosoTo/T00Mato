@@ -1,0 +1,302 @@
+.ClockPage {
+  width: 100%;
+  min-height: 590px;
+  height: 100vh;
+
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url(../../assets/Home.jpg);
+  background-size: cover;
+  background-position: center;
+
+  position: relative;
+}
+
+.MainFuncBtnsContainer {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background-color: rgba(100, 100, 100, 0.6);
+}
+
+.MainFuncBtnsContainer svg {
+  cursor: pointer;
+  fill: white;
+  font-size: 2rem;
+}
+
+@keyframes clock {
+  0% {
+    width: 100%;
+    height: 100%;
+  }
+  100% {
+    width: 0;
+    height: 0;
+  }
+}
+
+.Main {
+  width: 100%;
+  height: 100%;
+
+  position: relative;
+}
+
+.Main .MottoContainer {
+  text-align: center;
+}
+
+.Main .MottoContainer div {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Main .MottoContainer div span {
+  font-size: 1.6rem;
+}
+
+.Main .MottoContainer div span:first-child {
+  display: inline-block;
+  font-size: 1rem;
+  scale: 4;
+  padding: 0;
+
+  margin-top: 2rem;
+  margin-right: 1rem;
+}
+
+.Clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.ClockProgress {
+  position: relative;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  background-color: rgba(100, 100, 100, 0.65);
+}
+
+.Progress {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+
+  animation: clock 10s linear infinite forwards;
+}
+
+.ClockStyle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+
+  color: var(--secondary-color);
+}
+
+.ClockStyle h2 {
+  font-size: 4rem;
+}
+
+.ClockStyle h4 {
+  font-size: 1rem;
+}
+
+.ClockStyle h3 {
+  font-size: 1.3rem;
+}
+
+.TimeCountdown {
+  position: absolute;
+  right: 1.2rem;
+  top: 10%;
+  max-width: 14rem;
+  text-align: center;
+}
+
+.TimeCountdown > div {
+  border-radius: 1rem;
+  padding: 2rem 1rem;
+
+  background-color: rgba(0, 0, 0, 0.3);
+  color: var(--secondary-color);
+}
+
+.TimeCountdown > div p {
+  word-wrap: break-word;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.TimeCountdown > div h4 {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.TimeCountdown > div h4 strong {
+  font-size: 1.8rem;
+}
+
+@media screen and (max-height: 540px) {
+  .MainFuncBtnsContainer {
+    position: fixed;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    min-height: 18rem;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .MainFuncBtnsContainer {
+    position: fixed;
+    left: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    min-height: 18rem;
+  }
+
+  .TimeCountdown {
+    max-width: 10rem;
+  }
+}
+
+.MusicContainer {
+  padding: 3rem 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.SingleMusicContainer {
+  cursor: pointer;
+  height: 6rem;
+
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 1.5rem 1.5rem;
+  border-radius: 1rem;
+  background-color: #eee;
+}
+
+.SingleMusicContainer div {
+  height: 100%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.SingleMusicContainer div img {
+  width: 100%;
+  height: 100%;
+}
+
+.SingleMusicContainer h4 {
+  font-size: 1.2rem;
+}
+
+.Play {
+  border: 4px solid var(--main-color);
+}
+
+.PlayTool {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  z-index: 999;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+
+  transition: all 0.3s;
+}
+
+.PlayTool:hover {
+  bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.PlayTool h2 {
+  color: var(--secondary-color);
+}
+
+.PlayTool h4 {
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.PlayTool p {
+  text-align: center;
+  color: gray;
+  font-size: 0.7rem;
+}
+
+.GreenIcon svg {
+  fill: greenyellow;
+}
+
+.RedIcon svg {
+  fill: red;
+}
+
+.CD {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  background-color: #fff;
+  border-radius: 50%;
+
+  position: relative;
+}
+
+.CD svg {
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2rem;
+  height: 2rem;
+}
