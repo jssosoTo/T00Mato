@@ -58,22 +58,17 @@ function TimeClock({
     setTimeS(restSeconds);
   };
   const focusTime = () => {
-    setIsRested(false);
-    setTimeH(minutes);
-    setTimeS(seconds);
+    navigate('/todo', {
+      replace: true,
+    });
+    // setIsRested(false);
+    // setTimeH(minutes);
+    // setTimeS(seconds);
   };
 
   const formatTick = () => {
     if (isPaused) return;
     setTimeS((oldS) => {
-      if (timeH === 0 && oldS === 1) {
-        if (isRested) {
-          focusTime();
-        } else {
-          restTime();
-        }
-        return oldS;
-      }
       if (oldS === 0) {
         setTimeH((timeH) => {
           if (timeH === 0) return 0;
@@ -89,6 +84,16 @@ function TimeClock({
     const timer = setInterval(formatTick, 1000);
     return () => clearInterval(timer);
   }, [isPaused]);
+
+  useEffect(() => {
+    if (timeH === 0 && timeS === 0) {
+      if (isRested) {
+        focusTime();
+      } else {
+        restTime();
+      }
+    }
+  }, [timeS]);
 
   return (
     <div className={styles.ClockPage}>
