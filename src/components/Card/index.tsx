@@ -2,7 +2,7 @@ import React, { ReactNode } from 'react';
 import styles from './index.module.css';
 
 const Card: React.FC<{
-  title?: string;
+  title?: string | ReactNode;
   children?: ReactNode;
   className?: string;
   action?: ReactNode;

@@ -99,3 +99,17 @@ export const colorMap = {
     '--btn-main-color': 'rgb(177, 94, 255)',
   },
 };
+
+export const colors = [
+  '#087f5b',
+  '#1bb',
+  'rgb(248, 61, 61)',
+  'rgb(234, 36, 218)',
+  'rgb(75, 64, 23)',
+  'rgb(34, 67, 200)',
+  'rgb(214, 97, 8)',
+  'orangered',
+  'rgb(75, 192, 231)',
+  'rgb(213, 27, 126)',
+  'blueviolet',
+];

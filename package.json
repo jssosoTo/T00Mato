@@ -10,7 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/graphs": "^1.4.1",
+    "@ant-design/icons": "^5.2.6",
+    "@ant-design/plots": "^2.1.1",
     "antd": "^5.11.4",
+    "lodash": "^4.17.21",
     "moment": "^2.29.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
